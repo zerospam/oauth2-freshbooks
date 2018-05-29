@@ -28,12 +28,12 @@
   },
   "autoload": {
     "psr-4": {
-      "ZEROSPAM\\OAuth2\\Client\\": "src/"
+      "ZEROSPAM\\OAuth2\\Client\\Provider\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ZEROSPAM\\OAuth2\\Client\\Test\\": "tests/src/"
+      "ZEROSPAM\\OAuth2\\Client\\Provider\\Test\\": "tests/src/"
     }
   }
 }

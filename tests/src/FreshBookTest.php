@@ -1,13 +1,13 @@
 <?php
 
-namespace ZEROSPAM\OAuth2\Client\Test;
+namespace ZEROSPAM\OAuth2\Client\Provider\Test;
 
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Tool\QueryBuilderTrait;
 use PHPUnit\Framework\TestCase;
-use ZEROSPAM\OAuth2\Client\FreshBook;
+use ZEROSPAM\OAuth2\Client\Provider\FreshBook;
 use Mockery as m;
-use ZEROSPAM\OAuth2\Client\FreshBookOwner;
+use ZEROSPAM\OAuth2\Client\Provider\FreshBookOwner;
 
 /**
  * Created by PhpStorm.

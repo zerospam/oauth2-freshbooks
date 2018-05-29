@@ -6,7 +6,7 @@
  * Time: 14:04
  */
 
-namespace ZEROSPAM\OAuth2\Client;
+namespace ZEROSPAM\OAuth2\Client\Provider;
 
 use GuzzleHttp\RequestOptions;
 use League\OAuth2\Client\Provider\AbstractProvider;
