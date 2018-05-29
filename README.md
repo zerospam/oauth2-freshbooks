@@ -80,6 +80,7 @@ $provider = new ZEROSPAM\OAuth2\Client\Provider\Freshbook([
 
 $grant = new \League\OAuth2\Client\Grant\RefreshToken();
 $token = $provider->getAccessToken($grant, ['refresh_token' => $token->refreshToken]);
+```
 
 ## Testing
 
