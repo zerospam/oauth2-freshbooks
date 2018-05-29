@@ -8,6 +8,7 @@
 
 namespace League\OAuth2\Client;
 
+use GuzzleHttp\RequestOptions;
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
@@ -47,6 +48,23 @@ class FreshBook extends AbstractProvider
         return 'https://api.freshbooks.com/auth/oauth/token';
     }
 
+    protected function getAccessTokenOptions(array $params)
+    {
+        $options = [
+            RequestOptions::HEADERS => [
+                'content-type' => 'application/json',
+                'Api-Version'  => 'alpha',
+            ],
+        ];
+
+        if ($this->getAccessTokenMethod() === self::METHOD_POST) {
+            $options[RequestOptions::JSON] = $params;
+        }
+
+        return $options;
+    }
+
+
     /**
      * Returns the URL for requesting the resource owner's details.
      *
@@ -69,7 +87,7 @@ class FreshBook extends AbstractProvider
      */
     protected function getDefaultScopes()
     {
-        return [];
+        return ['profile:write'];
     }
 
     /**
@@ -85,17 +103,15 @@ class FreshBook extends AbstractProvider
     protected function checkResponse(ResponseInterface $response, $data)
     {
         static $errors = [
-            'error_description',
-            'error',
+            'error'      => 'error_description',
+            'error_type' => 'message',
         ];
-        array_map(
-            function ($error) use ($response, $data) {
-                if ($message = $this->getValueByKey($data, $error)) {
-                    throw new IdentityProviderException($message, $response->getStatusCode(), $response);
-                }
-            },
-            $errors
-        );
+
+        foreach ($errors as $errorKey => $errorMessage) {
+            if ($this->getValueByKey($data, $errorKey) && ($message = $this->getValueByKey($data, $errorMessage))) {
+                throw new IdentityProviderException($message, $response->getStatusCode(), $response);
+            }
+        }
     }
 
     /**
@@ -109,6 +125,6 @@ class FreshBook extends AbstractProvider
      */
     protected function createResourceOwner(array $response, AccessToken $token)
     {
-        // TODO: Implement createResourceOwner() method.
+        return new FreshBookOwner($response, $token);
     }
 }
