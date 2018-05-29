@@ -71,11 +71,21 @@ class FreshBookOwner implements ResourceOwnerInterface
     /**
      * Get first name
      *
-     * @return string|null
+     * @return string
      */
-    public function getAddress()
+    public function getLastName()
     {
-        return $this->response['address'];
+        return $this->response['last_name'];
+    }
+
+    /**
+     * Get first name
+     *
+     * @return array
+     */
+    public function getProfile()
+    {
+        return $this->response['profile'];
     }
 
     /**
