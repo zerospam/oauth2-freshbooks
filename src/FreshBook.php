@@ -48,22 +48,10 @@ class FreshBook extends AbstractProvider
         return 'https://api.freshbooks.com/auth/oauth/token';
     }
 
-    protected function getAccessTokenOptions(array $params)
+    protected function getDefaultHeaders()
     {
-        $options = [
-            RequestOptions::HEADERS => [
-                'content-type' => 'application/json',
-                'Api-Version'  => 'alpha',
-            ],
-        ];
-
-        if ($this->getAccessTokenMethod() === self::METHOD_POST) {
-            $options[RequestOptions::JSON] = $params;
-        }
-
-        return $options;
+        return ['Api-Version' => 'alpha'];
     }
-
 
     /**
      * Returns the URL for requesting the resource owner's details.
