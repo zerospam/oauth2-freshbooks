@@ -2,9 +2,7 @@
 
 [![Latest Version](https://img.shields.io/github/release/zerospam/oauth2-freshbook.svg?style=flat-square)](https://github.com/zerospam/oauth2-freshbook/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/zerospam/oauth2-freshbook/master.svg?style=flat-square)](https://travis-ci.org/zerospam/oauth2-freshbook)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/zerospam/oauth2-freshbook.svg?style=flat-square)](https://scrutinizer-ci.com/g/zerospam/oauth2-freshbook/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/zerospam/oauth2-freshbook.svg?style=flat-square)](https://scrutinizer-ci.com/g/zerospam/oauth2-freshbook)
+[![Build Status](https://travis-ci.com/zerospam/oauth2-freshbook.svg?branch=master)](https://travis-ci.com/zerospam/oauth2-freshbook)
 [![Total Downloads](https://img.shields.io/packagist/dt/zerospam/oauth2-freshbook.svg?style=flat-square)](https://packagist.org/packages/zerospam/oauth2-freshbook)
 
 This package provides Freshbook OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
