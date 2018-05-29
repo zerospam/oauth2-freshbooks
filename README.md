@@ -17,7 +17,7 @@ composer require zerospam/oauth2-freshbook
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\Zerospam\OAuth2\Client\Provider\Freshbook` as the provider.
+Usage is the same as The League's OAuth client, using `\ZEROSPAM\OAuth2\Client\Provider\Freshbook` as the provider.
 
 ### Authorization Code Flow
 
