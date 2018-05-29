@@ -6,7 +6,7 @@
  * Time: 14:26
  */
 
-namespace League\OAuth2\Client;
+namespace ZEROSPAM\OAuth2\Client;
 
 use League\OAuth2\Client\Provider\GenericResourceOwner;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
