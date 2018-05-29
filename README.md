@@ -69,6 +69,18 @@ if (!isset($_GET['code'])) {
 }
 ```
 
+### Refreshing a Token
+
+```php
+$provider = new ZEROSPAM\OAuth2\Client\Provider\Freshbook([
+    'clientId'          => '{freshbook-client-id}',
+    'clientSecret'      => '{freshbook-client-secret}',
+    'redirectUri'       => 'https://example.com/callback-url'
+]);
+
+$grant = new \League\OAuth2\Client\Grant\RefreshToken();
+$token = $provider->getAccessToken($grant, ['refresh_token' => $token->refreshToken]);
+
 ## Testing
 
 ``` bash
