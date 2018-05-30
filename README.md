@@ -1,4 +1,4 @@
-# Freshbook Provider for OAuth 2.0 Client
+# Freshbooks Provider for OAuth 2.0 Client
 
 [![Latest Version](https://img.shields.io/github/release/zerospam/oauth2-freshbook.svg?style=flat-square)](https://github.com/zerospam/oauth2-freshbook/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
