@@ -5,9 +5,9 @@ namespace ZEROSPAM\OAuth2\Client\Provider\Test;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Tool\QueryBuilderTrait;
 use PHPUnit\Framework\TestCase;
-use ZEROSPAM\OAuth2\Client\Provider\FreshBook;
+use ZEROSPAM\OAuth2\Client\Provider\FreshBooks;
 use Mockery as m;
-use ZEROSPAM\OAuth2\Client\Provider\FreshBookOwner;
+use ZEROSPAM\OAuth2\Client\Provider\FreshBooksOwner;
 
 /**
  * Created by PhpStorm.
@@ -19,7 +19,7 @@ class FreshBookTest extends TestCase
 {
     use QueryBuilderTrait;
     /**
-     * @var FreshBook
+     * @var FreshBooks
      */
     protected $provider;
 
@@ -37,7 +37,7 @@ class FreshBookTest extends TestCase
 
     protected function setUp()
     {
-        $this->provider = new FreshBook(
+        $this->provider = new FreshBooks(
             [
                 'clientId'     => 'mock_client_id',
                 'clientSecret' => 'mock_client_secret',
@@ -145,7 +145,7 @@ JSON;
         $this->provider->setHttpClient($client);
         $token = $this->provider->getAccessToken('authorization_code', ['code' => 'mock_authorization_code']);
         /**
-         * @var $user FreshBookOwner
+         * @var $user FreshBooksOwner
          */
         $user = $this->provider->getResourceOwner($token);
         $this->assertEquals($id, $user->getId());

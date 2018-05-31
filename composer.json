@@ -1,5 +1,5 @@
 {
-  "name": "zerospam/oauth2-freshbook",
+  "name": "zerospam/oauth2-freshbooks",
   "description": "Freshbook OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
   "license": "MIT",
   "authors": [
@@ -15,7 +15,7 @@
     "client",
     "authorization",
     "authorisation",
-    "freshbook"
+    "freshbooks"
   ],
   "require": {
     "league/oauth2-client": "^2.0"

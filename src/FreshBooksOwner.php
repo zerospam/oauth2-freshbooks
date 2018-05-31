@@ -12,7 +12,7 @@ use League\OAuth2\Client\Provider\GenericResourceOwner;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 use League\OAuth2\Client\Token\AccessToken;
 
-class FreshBookOwner implements ResourceOwnerInterface
+class FreshBooksOwner implements ResourceOwnerInterface
 {
 
     /**

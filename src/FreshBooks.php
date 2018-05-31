@@ -17,7 +17,7 @@ use League\OAuth2\Client\Tool\ArrayAccessorTrait;
 use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
 use Psr\Http\Message\ResponseInterface;
 
-class FreshBook extends AbstractProvider
+class FreshBooks extends AbstractProvider
 {
     use ArrayAccessorTrait,
         BearerAuthorizationTrait;
@@ -113,6 +113,6 @@ class FreshBook extends AbstractProvider
      */
     protected function createResourceOwner(array $response, AccessToken $token)
     {
-        return new FreshBookOwner($response, $token);
+        return new FreshBooksOwner($response, $token);
     }
 }

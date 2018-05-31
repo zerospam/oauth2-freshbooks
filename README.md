@@ -1,30 +1,30 @@
-# Freshbooks Provider for OAuth 2.0 Client
+# Freshbookss Provider for OAuth 2.0 Client
 
-[![Latest Version](https://img.shields.io/github/release/zerospam/oauth2-freshbook.svg?style=flat-square)](https://github.com/zerospam/oauth2-freshbook/releases)
+[![Latest Version](https://img.shields.io/github/release/zerospam/oauth2-freshbooks.svg?style=flat-square)](https://github.com/zerospam/oauth2-freshbooks/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://travis-ci.com/zerospam/oauth2-freshbook.svg?branch=master)](https://travis-ci.com/zerospam/oauth2-freshbook)
-[![Total Downloads](https://img.shields.io/packagist/dt/zerospam/oauth2-freshbook.svg?style=flat-square)](https://packagist.org/packages/zerospam/oauth2-freshbook)
+[![Build Status](https://travis-ci.com/zerospam/oauth2-freshbooks.svg?branch=master)](https://travis-ci.com/zerospam/oauth2-freshbooks)
+[![Total Downloads](https://img.shields.io/packagist/dt/zerospam/oauth2-freshbooks.svg?style=flat-square)](https://packagist.org/packages/zerospam/oauth2-freshbooks)
 
-This package provides Freshbook OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
+This package provides Freshbooks OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## Installation
 
 To install, use composer:
 
 ```
-composer require zerospam/oauth2-freshbook
+composer require zerospam/oauth2-freshbooks
 ```
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\ZEROSPAM\OAuth2\Client\Provider\Freshbook` as the provider.
+Usage is the same as The League's OAuth client, using `\ZEROSPAM\OAuth2\Client\Provider\Freshbooks` as the provider.
 
 ### Authorization Code Flow
 
 ```php
-$provider = new ZEROSPAM\OAuth2\Client\Provider\Freshbook([
-    'clientId'          => '{freshbook-client-id}',
-    'clientSecret'      => '{freshbook-client-secret}',
+$provider = new ZEROSPAM\OAuth2\Client\Provider\Freshbooks([
+    'clientId'          => '{freshbooks-client-id}',
+    'clientSecret'      => '{freshbooks-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url'
 ]);
 
@@ -72,9 +72,9 @@ if (!isset($_GET['code'])) {
 ### Refreshing a Token
 
 ```php
-$provider = new ZEROSPAM\OAuth2\Client\Provider\Freshbook([
-    'clientId'          => '{freshbook-client-id}',
-    'clientSecret'      => '{freshbook-client-secret}',
+$provider = new ZEROSPAM\OAuth2\Client\Provider\Freshbooks([
+    'clientId'          => '{freshbooks-client-id}',
+    'clientSecret'      => '{freshbooks-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url'
 ]);
 
@@ -90,15 +90,15 @@ $ ./vendor/bin/phpunit
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/zerospam/oauth2-freshbook/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/zerospam/oauth2-freshbooks/blob/master/CONTRIBUTING.md) for details.
 
 
 ## Credits
 
 - [Antoine Aflalo](https://github.com/Belphemur)
-- [All Contributors](https://github.com/zerospam/oauth2-freshbook/contributors)
+- [All Contributors](https://github.com/zerospam/oauth2-freshbooks/contributors)
 
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/zerospam/oauth2-freshbook/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/zerospam/oauth2-freshbooks/blob/master/LICENSE) for more information.
