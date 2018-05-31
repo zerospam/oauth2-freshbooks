@@ -18,5 +18,4 @@ script:
   - ./vendor/bin/phpunit --configuration phpunit.xml --coverage-clover build/logs/clover.xml
 
 after_script:
-  - travis_retry composer require satooshi/php-coveralls
-  - php vendor/bin/coveralls -v
+  - php vendor/bin/php-coveralls -v
