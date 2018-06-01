@@ -48,6 +48,11 @@ class FreshBooks extends AbstractProvider
         return 'https://api.freshbooks.com/auth/oauth/token';
     }
 
+    public function getAuthorizationHeaders($token = null)
+    {
+        return ['Authorization' => 'Bearer ' . $token];
+    }
+
     protected function getDefaultHeaders()
     {
         return ['Api-Version' => 'alpha'];
