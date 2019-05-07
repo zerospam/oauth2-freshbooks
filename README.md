@@ -17,12 +17,12 @@ composer require zerospam/oauth2-freshbooks
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\ZEROSPAM\OAuth2\Client\Provider\Freshbooks` as the provider.
+Usage is the same as The League's OAuth client, using `\ZEROSPAM\OAuth2\Client\Provider\FreshBooks` as the provider.
 
 ### Authorization Code Flow
 
 ```php
-$provider = new ZEROSPAM\OAuth2\Client\Provider\Freshbooks([
+$provider = new ZEROSPAM\OAuth2\Client\Provider\FreshBooks([
     'clientId'          => '{freshbooks-client-id}',
     'clientSecret'      => '{freshbooks-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url'
@@ -72,7 +72,7 @@ if (!isset($_GET['code'])) {
 ### Refreshing a Token
 
 ```php
-$provider = new ZEROSPAM\OAuth2\Client\Provider\Freshbooks([
+$provider = new ZEROSPAM\OAuth2\Client\Provider\FreshBooks([
     'clientId'          => '{freshbooks-client-id}',
     'clientSecret'      => '{freshbooks-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url'
