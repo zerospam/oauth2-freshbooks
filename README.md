@@ -1,4 +1,4 @@
-# Freshbookss Provider for OAuth 2.0 Client
+# Freshbooks Provider for OAuth 2.0 Client
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Coverage Status](https://coveralls.io/repos/github/zerospam/oauth2-freshbook/badge.svg?branch=)](https://coveralls.io/github/zerospam/oauth2-freshbook?branch=)
